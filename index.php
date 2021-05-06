@@ -64,33 +64,59 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>XKCD Challenge</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            input{
+              width: 100%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 2px solid #ccc;
+              border-radius: 6px;
+              box-sizing: border-box;
+            }
+            
+            div {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            }
+            
+            button {
+              width: 100%;
+              background-color: #4CAF50;
+              color: white;
+              padding: 14px 20px;
+              margin: 8px 0;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+            button:hover {
+              background-color: #45a049;
+            }
+        </style>
     </head>
     <body>
     <?php
         if(!empty($alert)){
-            ?>
-        <div class="alert alert-primary" role="alert">
-            <?php echo $alert; ?>
-        </div>
-    <?php
-
+            echo "
+                <script>alert('$alert');</script>
+            ";
         }
 
     ?>
-        <div class="container">
+        <div>
             <h1>Subscribe for XKCD Images</h1>
             <form method="POST" action="">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter email">
-                    <small class="form-text text-muted">We"ll never share your email with anyone else.</small>
+                    <h3>Email address</h3>
+                    <input type="email" name="email" placeholder="Enter email" required>
+                    <small>We"ll never share your email with anyone else.</small>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit">Submit</button>
             </form>
         <div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
     </body>
 </html>
