@@ -1,8 +1,8 @@
 # rtcamp_xkcd_challenge
 
-###### This simple PHP application accepts a visitor’s email address and emails them random XKCD comics every five minutes.
+## This simple PHP application accepts a visitor’s email address and emails them random XKCD comics every five minutes.
 
-###### There are mainly 5 files.
+## There are mainly 5 files.
 ```
 DBConnection.php
 index.php
