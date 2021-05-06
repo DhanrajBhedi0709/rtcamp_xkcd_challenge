@@ -19,7 +19,11 @@
             $stmt->bind_param("ss", $email, $hash);
             $stmt->execute();
             if($stmt->affected_rows > 0){
-                echo "Unsubscribe done successfully";
+                echo "
+                    <script>alert('Unsubscribe done successfully');
+                    window.location.href = 'index.php';
+                    </script>
+                ";
             } else {
                 echo "Unsubscribe Failed";
             }

@@ -28,7 +28,7 @@
             if ($stmt->affected_rows > 0) {
                 $to = $email;
                 $subject = "Verification";
-                $url = "http://localhost/rtcamp/verify.php?email=$email&hash=$hash";
+                $url = "http://xkcd.ictmu.in/verify.php?email=$email&hash=$hash";
                 $msg = "
                     <html>
                         <head>
@@ -42,9 +42,9 @@
                 ";
                 $headers = "MIME-Version: 1.0" . "\r\n";
                 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                $headers .= "From: noreply@example.com" . "\r\n";
+                $headers .= "From: noreply@ictmu.in" . "\r\n";
 
-                @mail($to, $subject, $msg, $headers);
+                mail($to, $subject, $msg, $headers);
 
                 $alert = 'Verification Mail sent to your email address.';
 

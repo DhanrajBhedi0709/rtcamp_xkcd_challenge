@@ -22,15 +22,15 @@ class Database
     /**
      * @var string
      */
-    private $db = "rtcamp";
+    private $db = "ictmu6ya_xkcd";
     /**
      * @var string
      */
-    private $user = "root";
+    private $user = "ictmu6ya_dhanraj";
     /**
      * @var string
      */
-    private $pass = "";
+    private $pass = "Qwerty@123";
 
     // The constructor is private
     // to prevent initiation with outer code.
