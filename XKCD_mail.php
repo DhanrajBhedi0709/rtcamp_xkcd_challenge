@@ -20,7 +20,7 @@
 
     $img_url = $json_data['img'];
 
-    $img_path = 'xkcd_image.png';
+    $img_path = '/home/ictmu6ya/xkcd.ictmu.in/xkcd_image.png';
     file_put_contents($img_path, file_get_contents($img_url));
 
     $subject = $json_data['safe_title'];
@@ -45,7 +45,7 @@
                     <body>
                         <center>
                             <h1>" . $json_data['title'] . "</h1>
-                            <img src='http://xkcd.ictmu.in/". $img_path ."' alt='". $json_data['alt'] ."'>
+                            <img src='". $img_url ."' alt='". $json_data['alt'] ."'>
                             <a href='http://xkcd.ictmu.in/unsubscribe.php?email=$to&hash=$hash'><h3>Unsubscribe XKCD</h3></a>
                         </center><br/>
                     </body>
